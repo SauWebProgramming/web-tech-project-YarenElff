@@ -1,0 +1,202 @@
+[
+  {
+    "id": 1,
+    "title": "Inception",
+    "poster": "https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg",
+    "genre": "Bilim Kurgu",
+    "year": 2010,
+    "duration": "148 dk",
+    "imdb": 8.8,
+    "description": "Rüyalar içinde rüya görerek bilinçaltına fikir ekmeye çalışan bir hırsızın, imkansız bir görevi başarma hikayesi."
+  },
+  {
+    "id": 2,
+    "title": "The Dark Knight",
+    "poster": "https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_SX300.jpg",
+    "genre": "Aksiyon",
+    "year": 2008,
+    "duration": "152 dk",
+    "imdb": 9.0,
+    "description": "Batman, Joker'in Gotham'da yarattığı kaosla savaşırken adalet ve intikam arasındaki ince çizgide yürür."
+  },
+  {
+    "id": 3,
+    "title": "Interstellar",
+    "poster": "https://m.media-amazon.com/images/M/MV5BZjdkOTU3MDktN2IxOS00OGEyLWFmMjktY2FiMmZkNWIyODZiXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg",
+    "genre": "Bilim Kurgu",
+    "year": 2014,
+    "duration": "169 dk",
+    "imdb": 8.6,
+    "description": "İnsanlığın kurtuluşu için solucan deliğinden geçen bir grup astronotun uzay ve zamanı büken yolculuğu."
+  },
+  {
+    "id": 4,
+    "title": "The Godfather",
+    "poster": "https://m.media-amazon.com/images/M/MV5BM2MyNjYxNmUtYTAwNi00MTYxLWJmNWYtYzZlODY3ZTk3OTFlXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg",
+    "genre": "Suç",
+    "year": 1972,
+    "duration": "175 dk",
+    "imdb": 9.2,
+    "description": "Corleone suç ailesinin yaşlanan patriği, imparatorluğunu isteksiz oğluna devrederken yaşanan güç savaşları."
+  },
+  {
+    "id": 5,
+    "title": "Pulp Fiction",
+    "poster": "https://m.media-amazon.com/images/M/MV5BNGNhMDIzZTUtNTBlZi00MTRlLWFjM2ItYzViMjE3YzI5MjljXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg",
+    "genre": "Suç",
+    "year": 1994,
+    "duration": "154 dk",
+    "imdb": 8.9,
+    "description": "Los Angeles yeraltı dünyasından dört farklı hikayenin şiddet ve mizah dolu bir şekilde kesişmesi."
+  },
+  {
+    "id": 6,
+    "title": "The Matrix",
+    "poster": "https://m.media-amazon.com/images/M/MV5BNzQzOTk3OTAtNDQ0Zi00ZTVkLWI0MTEtMDllZjNkYzNjNTc4L2ltYWdlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg",
+    "genre": "Bilim Kurgu",
+    "year": 1999,
+    "duration": "136 dk",
+    "imdb": 8.7,
+    "description": "Bir bilgisayar korsanı, yaşadığı dünyanın aslında bir simülasyon olduğunu ve insanlığın köleleştirildiğini keşfeder."
+  },
+  {
+    "id": 7,
+    "title": "Fight Club",
+    "poster": "https://m.media-amazon.com/images/M/MV5BNDIzNDU0YzEtYzE5Ni00ZjlkLTk5ZjgtNjM3NWE4YzA3Nzk3XkEyXkFqcGdeQXVyMjUzOTY1NTc@._V1_SX300.jpg",
+    "genre": "Dram",
+    "year": 1999,
+    "duration": "139 dk",
+    "imdb": 8.8,
+    "description": "Uykusuzluk çeken bir ofis çalışanı, karizmatik bir sabun satıcısıyla yeraltı dövüş kulübü kurar."
+  },
+  {
+    "id": 8,
+    "title": "Forrest Gump",
+    "poster": "https://m.media-amazon.com/images/M/MV5BNWIwODRlZTUtY2U3ZS00Yzg1LWJhNzYtMmZiYmEyNmU1NjMzXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg",
+    "genre": "Dram",
+    "year": 1994,
+    "duration": "142 dk",
+    "imdb": 8.8,
+    "description": "Düşük IQ'ya sahip ama iyi kalpli Forrest Gump'ın, ABD'nin tarihi olaylarına tanıklık ettiği hayat hikayesi."
+  },
+  {
+    "id": 9,
+    "title": "The Lord of the Rings: The Return of the King",
+    "poster": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRZzgwhMq3caDZGr0DtXGEFIhpFNg8hv26jjflOdFdILRd6w8-p",
+    "genre": "Macera",
+    "year": 2003,
+    "duration": "201 dk",
+    "imdb": 9.0,
+    "description": "Gandalf ve Aragorn, Sauron'un ordusuna karşı son savaşı yönetirken, Frodo ve Sam Yüzük'ü yok etmeye çalışır."
+  },
+  {
+    "id": 10,
+    "title": "Gladiator",
+    "poster": "https://m.media-amazon.com/images/M/MV5BMDliMmNhNDEtODUyOS00MjNlLTgxODEtN2U3NzIxMGVkZTA1L2ltYWdlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg",
+    "genre": "Aksiyon",
+    "year": 2000,
+    "duration": "155 dk",
+    "imdb": 8.5,
+    "description": "İhanete uğrayan Romalı bir general, ailesinin intikamını almak için gladyatör olarak Roma'ya döner."
+  },
+  {
+    "id": 11,
+    "title": "Spider-Man: Into the Spider-Verse",
+    "poster": "https://m.media-amazon.com/images/M/MV5BMjMwNDkxMTgzOF5BMl5BanBnXkFtZTgwNTkwNTQ3NjM@._V1_SX300.jpg",
+    "genre": "Animasyon",
+    "year": 2018,
+    "duration": "117 dk",
+    "imdb": 8.4,
+    "description": "Genç Miles Morales, diğer boyutlardan gelen Örümcek Adamlarla işbirliği yaparak dünyayı kurtarmalıdır."
+  },
+  {
+    "id": 12,
+    "title": "Avengers: Endgame",
+    "poster": "https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_SX300.jpg",
+    "genre": "Aksiyon",
+    "year": 2019,
+    "duration": "181 dk",
+    "imdb": 8.4,
+    "description": "Thanos'un evrenin yarısını yok etmesinden sonra kalan Avengers üyeleri, her şeyi geri getirmek için bir araya gelir."
+  },
+  {
+    "id": 13,
+    "title": "Joker",
+    "poster": "https://m.media-amazon.com/images/M/MV5BNGVjNWI4ZGUtNzE0MS00YTJmLWE0ZDctN2ZiYTk2YmI3NTYyXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SX300.jpg",
+    "genre": "Suç",
+    "year": 2019,
+    "duration": "122 dk",
+    "imdb": 8.4,
+    "description": "Toplum tarafından dışlanan Arthur Fleck, yavaş yavaş deliliğe sürüklenerek suç dehası Joker'e dönüşür."
+  },
+  {
+    "id": 14,
+    "title": "Parasite",
+    "poster": "https://m.media-amazon.com/images/M/MV5BYWZjMjk3ZTItODQ2ZC00NTY5LWE0ZDYtZTI3MjcwN2Q5NTVkXkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_SX300.jpg",
+    "genre": "Dram",
+    "year": 2019,
+    "duration": "132 dk",
+    "imdb": 8.5,
+    "description": "Yoksul Kim ailesi, zengin Park ailesinin hayatına sinsi bir planla sızar, ancak işler beklenmedik bir hal alır."
+  },
+  {
+    "id": 15,
+    "title": "Whiplash",
+    "poster": "https://m.media-amazon.com/images/M/MV5BOTA5NDZlZGUtMjAxOS00YTRkLTkwYmMtYWQ0NWEwZDZiNjEzXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg",
+    "genre": "Dram",
+    "year": 2014,
+    "duration": "106 dk",
+    "imdb": 8.5,
+    "description": "Genç bir davulcu, mükemmelliğe ulaşmak için sınırlarını zorlayan acımasız bir orkestra şefiyle çalışmaya başlar."
+  },
+  {
+    "id": 16,
+    "title": "Blade Runner 2049",
+    "poster": "https://m.media-amazon.com/images/M/MV5BNzA1Njg4NzYxOV5BMl5BanBnXkFtZTgwODk5NjU3MzI@._V1_SX300.jpg",
+    "genre": "Bilim Kurgu",
+    "year": 2017,
+    "duration": "164 dk",
+    "imdb": 8.0,
+    "description": "Genç bir Blade Runner, toplumdan geriye kalanları kaosa sürükleyebilecek uzun süredir saklanan bir sırrı keşfeder."
+  },
+  {
+    "id": 17,
+    "title": "Spirited Away",
+    "poster": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUhcxBy7msWBIrxRvKnczoXV61Vd6kqP5H2Kh3m2U8MMG15JIj",
+    "genre": "Animasyon",
+    "year": 2001,
+    "duration": "125 dk",
+    "imdb": 8.6,
+    "description": "Ailesi domuzlara dönüşen küçük bir kız, ruhlar dünyasında hayatta kalmak ve ailesini kurtarmak zorundadır."
+  },
+  {
+    "id": 18,
+    "title": "The Shawshank Redemption",
+    "poster": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRipfEoI8fb4qxidki3e_kp3fr_Kopvoi2yCKcpJGf2ngnKweMR",
+    "genre": "Dram",
+    "year": 1994,
+    "duration": "142 dk",
+    "imdb": 9.3,
+    "description": "İşlemediği bir suçtan hapse giren bankacı Andy Dufresne'nin, umudunu kaybetmeden hapishanede geçirdiği yıllar."
+  },
+  {
+    "id": 19,
+    "title": "Dune: Part Two",
+    "poster": "https://m.media-amazon.com/images/M/MV5BN2QyZGU4ZDctOWMzMy00NTc5LThlOGQtODhmNDI1NmY5YzAwXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_SX300.jpg",
+    "genre": "Bilim Kurgu",
+    "year": 2024,
+    "duration": "166 dk",
+    "imdb": 8.8,
+    "description": "Paul Atreides, ailesini yok eden komploculara karşı intikam savaşı başlatırken Fremenlerle birleşir."
+  },
+  {
+    "id": 20,
+    "title": "Goodfellas",
+    "poster": "https://m.media-amazon.com/images/M/MV5BY2NkZjEzMDgtN2RjYy00YzM1LWI4ZmQtMjIwYjFjNmI3ZGEwXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg",
+    "genre": "Suç",
+    "year": 1990,
+    "duration": "146 dk",
+    "imdb": 8.7,
+    "description": "Henry Hill'in ve arkadaşlarının 1955'ten 1980'e kadar süren mafya içindeki yükseliş ve düşüş hikayesi."
+  }
+]

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CineLibrary - İnteraktif Medya</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="logo">🎬 Cine<span>Lib</span></div>
+        <div class="search-container">
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Film, dizi veya oyuncu ara..."
+          />
+          <select id="genreFilter">
+            <option value="all">Tüm Kategoriler</option>
+            <option value="Aksiyon">Aksiyon</option>
+            <option value="Bilim Kurgu">Bilim Kurgu</option>
+            <option value="Dram">Dram</option>
+            <option value="Suç">Suç</option>
+            <option value="Macera">Macera</option>
+            <option value="Animasyon">Animasyon</option>
+          </select>
+        </div>
+        <button id="showFavoritesBtn" class="btn btn-outline">
+          Favorilerim
+        </button>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero-section">
+        <div class="hero-content">
+          <h1>Keşfetmeye Başla</h1>
+          <p>En popüler filmler, ödüllü yapımlar ve klasikler tek bir yerde.</p>
+        </div>
+      </section>
+
+      <section id="movie-list-section" class="container">
+        <div class="section-header">
+          <h2>Popüler İçerikler</h2>
+          <div class="divider"></div>
+        </div>
+
+        <div class="movie-grid" id="movieGrid">
+          <div class="loading-msg">Veriler getiriliyor...</div>
+        </div>
+      </section>
+
+      <section id="movie-detail-section" class="container hidden">
+        <button id="backBtn" class="btn btn-primary">← Listeye Dön</button>
+        <div id="movieDetailContent" class="detail-card"></div>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        Web Teknolojileri Ödevi 2025 | Tasarım & Kodlama: Yaren Elif
+        Demir(B241200011)
+      </p>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
