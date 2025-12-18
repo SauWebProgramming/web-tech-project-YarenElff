@@ -60,3 +60,34 @@ function displayMovies(movies) {
 document.addEventListener("DOMContentLoaded", () => {
   fetchMovies();
 });
+
+// --- 3. AŞAMA: Olay Dinleyicileri (Event Listeners) ---
+
+// Kullanıcı arama kutusuna her harf yazdığında tetiklenir
+searchInput.addEventListener("input", filterMovies);
+
+// Kullanıcı filtreyi (dropdown) değiştirdiğinde tetiklenir
+genreFilter.addEventListener("change", filterMovies);
+
+// Filtreleme Fonksiyonu
+function filterMovies() {
+  const searchTerm = searchInput.value.toLowerCase(); // Aranan kelimeyi küçült
+  const selectedGenre = genreFilter.value; // Seçilen kategoriyi al
+
+  // Ana film listesi (allMovies) üzerinde filtreleme yap
+  const filteredMovies = allMovies.filter((movie) => {
+    // 1. Arama kriteri: Film başlığı aranan kelimeyi içeriyor mu?
+    const matchesSearch = movie.title.toLowerCase().includes(searchTerm);
+
+    // 2. Kategori kriteri: Seçilen kategori uyuyor mu veya "hepsi" mi?
+    // (HTML'deki option value="all" olduğunu varsayıyoruz)
+    const matchesGenre =
+      selectedGenre === "all" || movie.genre === selectedGenre;
+
+    // İki şartı da sağlıyorsa listeye al
+    return matchesSearch && matchesGenre;
+  });
+
+  // Ekrana sadece filtrelenmiş listeyi bas
+  displayMovies(filteredMovies);
+}
