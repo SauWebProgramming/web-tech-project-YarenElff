@@ -91,3 +91,54 @@ function filterMovies() {
   // Ekrana sadece filtrelenmiş listeyi bas
   displayMovies(filteredMovies);
 }
+
+// --- Modal Açma/Kapama İşlemleri ---
+
+const modal = document.getElementById("movieModal");
+const closeBtn = document.querySelector(".close-btn");
+
+// HTML elemanlarını seçelim (İçlerini dolduracağız)
+const modalTitle = document.getElementById("modalTitle");
+const modalImage = document.getElementById("modalImage");
+const modalOverview = document.getElementById("modalOverview");
+const modalRating = document.getElementById("modalRating");
+const modalGenre = document.getElementById("modalGenre");
+
+// 1. Film Kartına Tıklama Olayı
+// Grid'e tıklayınca hangi karta tıklandığını buluruz
+movieGrid.addEventListener("click", (e) => {
+  // Tıklanan yer bir kartın içindeyse, o kartı bul
+  const card = e.target.closest(".movie-card");
+
+  if (card) {
+    // Kartın üzerindeki data-id'den filmin ID'sini al
+    const movieId = parseInt(card.getAttribute("data-id"));
+
+    // Bu ID'ye sahip filmi ana listemizden bul
+    const movie = allMovies.find((m) => m.id === movieId);
+
+    if (movie) {
+      // Modaldaki bilgileri güncelle
+      modalTitle.textContent = movie.title;
+      modalImage.src = movie.poster;
+      modalOverview.textContent = movie.description;
+      modalRating.textContent = movie.imdb;
+      modalGenre.textContent = movie.genre;
+
+      // Modalı aç
+      modal.classList.add("active");
+    }
+  }
+});
+
+// Kapatma Butonuna Tıklayınca
+closeBtn.addEventListener("click", () => {
+  modal.classList.remove("active");
+});
+
+// Modalin Dışına Tıklayınca Kapat
+window.addEventListener("click", (e) => {
+  if (e.target === modal) {
+    modal.classList.remove("active");
+  }
+});

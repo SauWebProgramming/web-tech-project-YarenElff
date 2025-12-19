@@ -68,6 +68,30 @@
       </p>
     </footer>
 
+    <div id="movieModal" class="modal">
+      <div class="modal-content extended-modal">
+        <span class="close-btn">&times;</span>
+
+        <div class="modal-body">
+          <div class="modal-left">
+            <img id="modalImage" src="" alt="Film Resmi" />
+            <h2 id="modalTitle">Film Başlığı</h2>
+            <div class="modal-meta">
+              <span class="modal-tag" id="modalGenre">Tür</span>
+              <span class="modal-rating"
+                >IMDb: <strong id="modalRating"></strong
+              ></span>
+            </div>
+          </div>
+
+          <div class="modal-right">
+            <h3>Özet</h3>
+            <p id="modalOverview">Film açıklaması burada yer alacak...</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script src="app.js"></script>
   </body>
 </html>
