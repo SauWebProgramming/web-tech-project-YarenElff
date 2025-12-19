@@ -406,3 +406,34 @@ footer {
 .modal.active {
   display: flex;
 }
+
+/* --- Favori Butonu (Kalp) Tasarımı --- */
+.favorite-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10; /* Resmin üzerinde dursun */
+}
+
+.favorite-btn:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: scale(1.1);
+}
+
+/* Kalp seçiliyken kırmızı olsun */
+.favorite-btn.active {
+  color: #e74c3c; /* Kırmızı renk */
+  background-color: rgba(255, 255, 255, 0.9);
+}

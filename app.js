@@ -1,8 +1,10 @@
 const movieGrid = document.getElementById("movieGrid");
 const searchInput = document.getElementById("searchInput");
 const genreFilter = document.getElementById("genreFilter");
+const yearFilter = document.getElementById("yearFilter");
 
 let allMovies = []; // Tüm filmleri burada tutacağız
+let favorites = JSON.parse(localStorage.getItem("favorites")) || []; //Favoriler için
 
 // --- Verileri JSON Dosyasından Çekme (Fetch API) ---
 async function fetchMovies() {
@@ -14,6 +16,7 @@ async function fetchMovies() {
     }
     const data = await response.json();
     allMovies = data;
+    populateYears();
 
     // Filmleri ekrana bas
     displayMovies(allMovies);
@@ -21,6 +24,21 @@ async function fetchMovies() {
     console.error("Hata:", error);
     movieGrid.innerHTML = `<p class="error">Filmler yüklenirken bir sorun oluştu. Lütfen daha sonra tekrar deneyin.</p>`;
   }
+}
+function populateYears() {
+  // Tüm filmlerden yılları al, tekrarlayanları kaldır (Set kullanarak)
+  const years = [...new Set(allMovies.map((movie) => movie.year))];
+
+  // Yılları yeniden eskiye sırala
+  years.sort((a, b) => b - a);
+
+  // Her yıl için bir <option> oluştur
+  years.forEach((year) => {
+    const option = document.createElement("option");
+    option.value = year;
+    option.textContent = year;
+    yearFilter.appendChild(option);
+  });
 }
 
 function displayMovies(movies) {
@@ -36,12 +54,21 @@ function displayMovies(movies) {
   movies.forEach((movie) => {
     const movieCard = document.createElement("div");
     movieCard.classList.add("movie-card");
-
     movieCard.setAttribute("data-id", movie.id);
 
+    // Film favorilerde mi kontrol et?
+    const isFavorite = favorites.includes(movie.id);
+
+    // HTML içine "favorite-btn" ekliyoruz:
     movieCard.innerHTML = `
             <div class="card-image">
                 <img src="${movie.poster}" alt="${movie.title}" loading="lazy">
+                
+                <button class="favorite-btn ${
+                  isFavorite ? "active" : ""
+                }" onclick="toggleFavorite(event, ${movie.id})">
+                    ♥
+                </button>
             </div>
             <div class="movie-info">
                 <h3>${movie.title}</h3>
@@ -61,34 +88,34 @@ document.addEventListener("DOMContentLoaded", () => {
   fetchMovies();
 });
 
-// --- 3. AŞAMA: Olay Dinleyicileri (Event Listeners) ---
+// --- Olay Dinleyicileri ---
 
-// Kullanıcı arama kutusuna her harf yazdığında tetiklenir
 searchInput.addEventListener("input", filterMovies);
-
-// Kullanıcı filtreyi (dropdown) değiştirdiğinde tetiklenir
 genreFilter.addEventListener("change", filterMovies);
+yearFilter.addEventListener("change", filterMovies);
 
-// Filtreleme Fonksiyonu
 function filterMovies() {
-  const searchTerm = searchInput.value.toLowerCase(); // Aranan kelimeyi küçült
-  const selectedGenre = genreFilter.value; // Seçilen kategoriyi al
+  const searchTerm = searchInput.value.toLowerCase();
+  const selectedGenre = genreFilter.value;
+  const selectedYear = yearFilter.value;
 
-  // Ana film listesi (allMovies) üzerinde filtreleme yap
   const filteredMovies = allMovies.filter((movie) => {
-    // 1. Arama kriteri: Film başlığı aranan kelimeyi içeriyor mu?
+    // Arama Kelimesi Kontrolü
     const matchesSearch = movie.title.toLowerCase().includes(searchTerm);
 
-    // 2. Kategori kriteri: Seçilen kategori uyuyor mu veya "hepsi" mi?
-    // (HTML'deki option value="all" olduğunu varsayıyoruz)
+    //  Kategori Kontrolü
     const matchesGenre =
       selectedGenre === "all" || movie.genre === selectedGenre;
 
-    // İki şartı da sağlıyorsa listeye al
-    return matchesSearch && matchesGenre;
+    // Yıl Kontrolü
+    // (movie.year sayı olduğu için string'e çevirip karşılaştırıyoruz)
+    const matchesYear =
+      selectedYear === "all" || movie.year.toString() === selectedYear;
+
+    // Hepsi uyuyorsa göster
+    return matchesSearch && matchesGenre && matchesYear;
   });
 
-  // Ekrana sadece filtrelenmiş listeyi bas
   displayMovies(filteredMovies);
 }
 
@@ -142,3 +169,65 @@ window.addEventListener("click", (e) => {
     modal.classList.remove("active");
   }
 });
+
+// --- FAVORİ İŞLEMLERİ ---
+// 1. Favoriye Ekle/Çıkar Fonksiyonu
+window.toggleFavorite = function (event, id) {
+  // Detay penceresi açılmasın diye tıklamayı durdur
+  event.stopPropagation();
+
+  // ID listede var mı?
+  if (favorites.includes(id)) {
+    favorites = favorites.filter((favId) => favId !== id); // Çıkar
+  } else {
+    favorites.push(id); // Ekle
+  }
+
+  // Tarayıcı hafızasına kaydet
+  localStorage.setItem("favorites", JSON.stringify(favorites));
+
+  // Ekranı güncelle
+  // Eğer şu an "Favorilerim" sekmesindeysek listeyi yenile
+  if (showFavoritesBtn.classList.contains("active-tab")) {
+    showOnlyFavorites();
+  } else {
+    // Değilsek sadece butonun rengini değiştir (Sayfa yenilenmesin diye)
+    const btn = event.target;
+    btn.classList.toggle("active");
+  }
+};
+
+// 2. Navbar'daki "Favorilerim" Butonu
+showFavoritesBtn.addEventListener("click", () => {
+  // Eğer zaten favorilerdeysek, ana listeye dön
+  if (showFavoritesBtn.classList.contains("active-tab")) {
+    showFavoritesBtn.textContent = "Favorilerim";
+    showFavoritesBtn.classList.remove("active-tab");
+    showFavoritesBtn.classList.add("btn-outline");
+    showFavoritesBtn.classList.remove("btn-primary");
+
+    // Filtreleri sıfırla ve tümünü göster
+    searchInput.value = "";
+    genreFilter.value = "all";
+    yearFilter.value = "all";
+    displayMovies(allMovies);
+  }
+  // Değilse, sadece favorileri göster
+  else {
+    showOnlyFavorites();
+  }
+});
+
+function showOnlyFavorites() {
+  // Butonun görüntüsünü değiştir
+  showFavoritesBtn.textContent = "Tüm Filmler";
+  showFavoritesBtn.classList.add("active-tab");
+  showFavoritesBtn.classList.remove("btn-outline");
+  showFavoritesBtn.classList.add("btn-primary");
+
+  // Sadece ID'si favoriler listesinde olan filmleri filtrele
+  const favoriteMovies = allMovies.filter((movie) =>
+    favorites.includes(movie.id)
+  );
+  displayMovies(favoriteMovies);
+}
