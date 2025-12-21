@@ -7,11 +7,11 @@ Bu proje, **Sakarya Üniversitesi - Web Teknolojileri** dersi kapsamında, moder
 
 ---
 
-## 🚀 Proje Hakkında
+##  Proje Hakkında
 
 CineLibrary, statik bir HTML dosyası yerine, verileri harici bir **JSON** kaynağından dinamik olarak çeken bir yapıya sahiptir. Kullanıcı deneyimini artırmak için gelişmiş filtreleme, arama ve modal (açılır pencere) özellikleri eklenmiştir.
 
-### 🎯 Temel Özellikler
+### Temel Özellikler
 
 * **Dinamik Veri Yönetimi:** Tüm film verileri (resim, başlık, puan, tür vb.) `movies.json` dosyasından **Fetch API** kullanılarak çekilmektedir.
 * **Gelişmiş Filtreleme:**
@@ -27,7 +27,7 @@ CineLibrary, statik bir HTML dosyası yerine, verileri harici bir **JSON** kayna
 
 ---
 
-## 🛠️ Kullanılan Teknolojiler
+##  Kullanılan Teknolojiler
 
 Proje geliştirilirken herhangi bir hazır kütüphane (Bootstrap vb.) kullanılmamış, tamamen **saf (vanilla)** kodlama yapılmıştır.
 
@@ -38,7 +38,7 @@ Proje geliştirilirken herhangi bir hazır kütüphane (Bootstrap vb.) kullanıl
 
 ---
 
-## 💻 Kurulum ve Çalıştırma
+##  Kurulum ve Çalıştırma
 
 Projeyi kendi bilgisayarınızda çalıştırmak için:
 
